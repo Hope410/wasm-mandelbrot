@@ -1,5 +1,4 @@
 import { Mandelbrot, Range } from "wasm-mandelbrot";
-import ColorScale from "color-scales";
 import _ from "lodash";
 
 const ITERATIONS = 64;
