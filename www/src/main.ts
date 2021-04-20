@@ -43,11 +43,8 @@ function render(mandelbrot: Mandelbrot, ctx: CanvasRenderingContext2D, imageData
   );
   console.timeEnd('update')
 
-  for (let y = 0; y < CANVAS_HEIGHT; ++y) {
-    const yx = y * CANVAS_WIDTH;
-    for (let x = 0; x < CANVAS_WIDTH; ++x) {
-      argb[yx + x] = buffer[yx + x];
-    }
+  for (let index = 0; index < buffer.length; ++index) {
+    argb[index] = buffer[index];
   }
 
   ctx.putImageData(imageData, 0, 0);
